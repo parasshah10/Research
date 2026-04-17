@@ -1,0 +1,14 @@
+[project]
+name = "mcp-research"
+version = "0.1.0"
+description = "Agentic web and X platform research via MCP"
+dependencies = [
+    "fastmcp",
+    "openai",
+]
+
+[tool.setuptools]
+py-modules = ["server"]
+
+[project.scripts]
+mcp-research = "server:main"
