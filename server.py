@@ -118,7 +118,7 @@ be thorough about objectives and format."""
             elapsed = int(time.time() - task["created_at"])
             return (
                 f"Still running ({elapsed}s elapsed). "
-                f"Check again shortly."
+                f"Let the user know and check again when they respond."
             )
         elif status == "completed":
             return task["result"]
@@ -143,7 +143,8 @@ be thorough about objectives and format."""
             return (
                 f"Research started: {tid}\n"
                 f"Taking longer than expected.\n"
-                f"Call research(task_id='{tid}') to get results when ready."
+                f"Let the user know, then call research(task_id='{tid}') "
+                f"when they respond to get results."
             )
         if _tasks[tid]["status"] == "completed":
             return _tasks[tid]["result"]
